@@ -1,0 +1,19 @@
+.markdown_container {
+  padding: 0 40px;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #222;
+  *,
+  *::before,
+  *::after {
+    all: revert;
+  }
+  img {
+    max-width: 100%;
+  }
+  pre,
+  code {
+    white-space: pre-wrap;
+  }
+}

@@ -1,0 +1,24 @@
+.footer {
+  height: 150px;
+  background: #222;
+  color: grey;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  .content {
+    .kaomoji {
+      display: inline-block;
+      margin-left: 3px;
+      animation: bounce 0.2s ease-in infinite alternate;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(2px);
+  }
+}

@@ -1,0 +1,35 @@
+.header {
+  width: 100vw;
+  background: var(--main);
+  box-shadow: var(--shadow);
+  padding: 0 10vw;
+
+  .site_nav {
+    .nav_menu {
+      display: flex;
+      height: var(--headerHeight);
+      align-items: center;
+
+      .menu_item {
+        width: 80px;
+        text-align: center;
+        transition: all 0.3s ease;
+        color: var(--text);
+
+        &:hover {
+          color: var(--link);
+          font-size: 17px;
+        }
+
+        &.active {
+          color: var(--link);
+          font-size: 17px;
+        }
+
+        a {
+          display: block;
+        }
+      }
+    }
+  }
+}
