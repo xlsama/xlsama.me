@@ -3,3 +3,9 @@
   display: grid;
   place-items: center;
 }
+
+@media screen and (max-width: 730px) {
+  .about {
+    padding-top: 15px;
+  }
+}
