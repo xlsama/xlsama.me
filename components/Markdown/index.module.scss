@@ -1,9 +1,6 @@
 .markdown_container {
-  padding: 10px 35px;
-  box-shadow: var(--shadow);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.8);
   color: #222;
+  font-size: 15px;
   *,
   *::before,
   *::after {
@@ -15,11 +12,5 @@
   pre,
   code {
     white-space: pre-wrap;
-  }
-}
-
-@media screen and (max-width: 730px) {
-  .markdown_container {
-    padding: 0 20px;
   }
 }

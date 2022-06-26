@@ -1,20 +1,33 @@
-import Header from 'components/Header'
-import type { NextPage } from 'next'
+import Markdown from 'components/Markdown'
+import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import css from 'styles/Home.module.scss'
 
-const Home: NextPage = () => {
+import path from 'path'
+import { readFileSync } from 'fs'
+
+type Props = {
+  data: string
+}
+
+const Home: NextPage<Props> = ({ data }) => {
   return (
     <>
       <Head>
-        <title>首页</title>
+        <title>xlsama</title>
       </Head>
-      <Header />
-      <main className={css.home}>
-        <h2 className={css.content}>以后再说</h2>
-      </main>
+      <main className={css.home}>{data && <Markdown>{data}</Markdown>}</main>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async context => {
+  const filePath = path.resolve('_posts', 'about.md')
+  const data = readFileSync(filePath).toString()
+
+  return {
+    props: { data },
+  }
 }
 
 export default Home

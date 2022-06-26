@@ -1,6 +1,11 @@
 .home {
+  display: grid;
+  justify-content: center;
   padding-top: 100px;
-  .content {
-    text-align: center;
+}
+
+@media screen and (max-width: 730px) {
+  .home {
+    padding: 30px;
   }
 }
